@@ -1,0 +1,28 @@
+{
+  "name": "jsonconverter",
+  "version": "1.0.0",
+  "description": "A nodejs module that will convert csv file to json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asthajadia12/jsonconverter.git"
+  },
+  "keywords": [
+    "nodejs",
+    "json",
+    "csv",
+    "jsontocsv"
+  ],
+  "author": "astha jadia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asthajadia12/jsonconverter/issues"
+  },
+  "homepage": "https://github.com/asthajadia12/jsonconverter#readme",
+  "dependencies": {
+    "co": "^4.6.0"
+  }
+}
