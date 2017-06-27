@@ -1,7 +1,13 @@
 const co = require('co');
+const { getDataFromFile } = require('./readFile');
+const { saveDataToFile } = require('./writeFile');
 
-function* logic(csvData, options) {
+function* logic(csv, options) {
   try {
+    let csvData = csv;
+    if (options.fromFile === true) {
+      csvData = yield getDataFromFile(csv);
+    }
     const records = yield csvData.split('\n');
     const n = records.length;
     const feildKeys = records[0].split(',');
@@ -15,16 +21,19 @@ function* logic(csvData, options) {
       });
       jsonData.push(obj);
     }
+    if (options.toFile === true) {
+      return saveDataToFile(jsonData);
+    }
     return jsonData;
   } catch (e) {
     throw (e);
   }
 }
 
-function handler(csvData, callback) {
-  co(logic(csvData))
+function handler(csvData, options, callback) {
+  co(logic(csvData, options))
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       callback(null, data);
     })
     .catch(err => {

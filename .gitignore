@@ -59,3 +59,9 @@ typings/
 
 #mac generated file
 .DS_Store
+
+#vscode file
+.vscode
+
+#output file
+output.json
