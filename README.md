@@ -8,8 +8,8 @@ $ npm i @asthajadia12/jsonconverter
 
 ## API
 
-.csvToJson(csvData, option, callback( err, data ) )
-  - option parameter:
+.csvToJson(csvData, option, callback( err, data ){ })
+   option parameter:
   - fromFile: set true if you are passing data through file.
   - toFile: : set true if you want output in the form of file. 
 
@@ -19,25 +19,25 @@ Conversion of raw csv to raw json as output.
 ```js
 var jsonc = require('@asthajadia12/jsonconverter');
 
-jsonc.csvToJson(filePath, {},
+jsonc.csvToJson(csvData, {},
   function (err, data) {
-      return data;
+      return data; // returns raw data
 })
 ```
 
 Conversion of csv file data to raw json as output.
 ```js
-jsonc.csvToJson(filePath, { fromFile: true },
+jsonc.csvToJson(csvFilePath, { fromFile: true },
   function (err, data) {
-      return data;
+      return data; // returns raw data
 })
 ```
 
 Conversion of csv file data to json file as output.
 ```js
-jsonc.csvToJson(filePath, { fromFile: true, toFile: true },
+jsonc.csvToJson(csvFilePath, { fromFile: true, toFile: true },
   function (err, data) {
-      return data;
+      return data; // returns output as output.json in currenct directory
 })
 ```
 

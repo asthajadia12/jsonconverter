@@ -1,6 +1,6 @@
 {
   "name": "jsonconverter",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A nodejs module that will convert csv file to json file",
   "main": "index.js",
   "scripts": {
