@@ -3,7 +3,7 @@
 
 Installation:
 ```bash
-$ npm i @asthajadia12/jsonconverter
+$ npm i jsonconverter
 ```
 
 ## API
